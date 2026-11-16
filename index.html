@@ -96,6 +96,26 @@ footer{text-align:center;padding:25px;color:#8995aa;border-top:1px solid #263044
   </button>
 
   <div id="tagResults" style="text-align:left; margin-top:25px;"></div>
+    
+<section id="hashtag-generator">
+  <h2>YouTube Hashtag Generator</h2>
+  <p>Enter your video topic and generate relevant YouTube hashtags.</p>
+
+  <input
+    type="text"
+    id="hashtagTopic"
+    placeholder="Enter your YouTube video topic"
+  >
+
+  <br><br>
+
+  <button onclick="generateHashtags()">
+    Generate Hashtags 🚀
+  </button>
+
+  <div id="hashtagResults" style="text-align:left; margin-top:15px;"></div>
+</section>
+    
   </section> <section id="description-generator" style="padding:40px 7%; text-align:center; background:#111a30; color:white; border-radius:25px; margin:30px 0;">
   <h2>📝 YouTube Description Generator</h2>
   <p>Enter your video topic and create a video description!</p>
@@ -198,6 +218,36 @@ function generateTitles() {
 
   results.innerHTML = description;
   }
+function generateHashtags() {
+  const topic = document.getElementById("hashtagTopic").value.trim();
+  const results = document.getElementById("hashtagResults");
+
+  if (topic === "") {
+    results.innerHTML = "Please enter your video topic!";
+    return;
+  }
+
+  const words = topic
+    .replace(/[^a-zA-Z0-9 ]/g, "")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+
+  const hashtags = [
+    "#" + words.join(""),
+    "#YouTube",
+    "#YouTubeShorts",
+    "#Trending",
+    "#ViralVideo",
+    "#ContentCreator",
+    "#NewVideo",
+    "#Subscribe"
+  ];
+
+  results.innerHTML = "<h3>Your YouTube Hashtags:</h3>" +
+    hashtags.map(tag => "<span style='margin:5px; display:inline-block;'>" + tag + "</span>").join("");
+  }
+  
 </script>
   
 </body>
