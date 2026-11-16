@@ -83,7 +83,20 @@ footer{text-align:center;padding:25px;color:#8995aa;border-top:1px solid #263044
   </button>
   <div id="titleResults" style="text-align:left; margin-top:25px;"></div>
 </section>
-  
+  <section id="seo-tags" style="padding:40px 7%; text-align:center; background:#111a30; color:white; border-radius:25px; margin:30px 0;">
+  <h2>🏷️ YouTube SEO Tags Generator</h2>
+  <p>Enter your video topic and get SEO tag suggestions!</p>
+
+  <input id="tagTopic" type="text" placeholder="Enter your video topic..." style="padding:15px; width:90%; max-width:400px; border-radius:12px; border:none; margin:15px 0;">
+
+  <br>
+
+  <button onclick="generateTags()" style="padding:15px 30px; background:#ff3045; color:white; border:none; border-radius:12px; font-weight:bold;">
+    Generate SEO Tags 🚀
+  </button>
+
+  <div id="tagResults" style="text-align:left; margin-top:25px;"></div>
+  </section>
 <script>
 function generateIdeas() {
   const niche = document.getElementById("niche").value.trim();
@@ -125,7 +138,33 @@ function generateTitles() {
   results.innerHTML = "<h3>✨ Your Video Titles</h3>" +
     titles.map((title, i) => `<p>${i + 1}. ${title}</p>`).join("");
   }
-  
+  function generateTags() {
+  const topic = document.getElementById("tagTopic").value.trim();
+  const results = document.getElementById("tagResults");
+
+  if (!topic) {
+    results.innerHTML = "<p>Please enter a video topic!</p>";
+    return;
+  }
+
+  const cleanTopic = topic.replace(/[^a-zA-Z0-9 ]/g, "").trim();
+
+  const tags = [
+    cleanTopic,
+    cleanTopic + " tips",
+    cleanTopic + " tutorial",
+    "how to " + cleanTopic,
+    "best " + cleanTopic,
+    cleanTopic + " for beginners",
+    cleanTopic + " ideas",
+    cleanTopic + " guide",
+    cleanTopic + " tricks",
+    cleanTopic + " videos"
+  ];
+
+  results.innerHTML = "<h3>✨ Your SEO Tags</h3>" +
+    "<p>" + tags.map(tag => tag.replace(/</g, "&lt;").replace(/>/g, "&gt;")).join(", ") + "</p>";
+  }
 </script>
   
 </body>
