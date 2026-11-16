@@ -96,6 +96,19 @@ footer{text-align:center;padding:25px;color:#8995aa;border-top:1px solid #263044
   </button>
 
   <div id="tagResults" style="text-align:left; margin-top:25px;"></div>
+  </section> <section id="description-generator" style="padding:40px 7%; text-align:center; background:#111a30; color:white; border-radius:25px; margin:30px 0;">
+  <h2>📝 YouTube Description Generator</h2>
+  <p>Enter your video topic and create a video description!</p>
+
+  <input id="descriptionTopic" type="text" placeholder="Enter your video topic..." style="padding:15px; width:90%; max-width:400px; border-radius:12px; border:none; margin:15px 0;">
+
+  <br>
+
+  <button onclick="generateDescription()" style="padding:15px 30px; background:#ff3045; color:white; border:none; border-radius:12px; font-weight:bold;">
+    Generate Description 🚀
+  </button>
+
+  <div id="descriptionResults" style="text-align:left; margin-top:25px;"></div>
   </section>
 <script>
 function generateIdeas() {
@@ -164,6 +177,26 @@ function generateTitles() {
 
   results.innerHTML = "<h3>✨ Your SEO Tags</h3>" +
     "<p>" + tags.map(tag => tag.replace(/</g, "&lt;").replace(/>/g, "&gt;")).join(", ") + "</p>";
+  }function generateDescription() {
+  const topic = document.getElementById("descriptionTopic").value.trim();
+  const results = document.getElementById("descriptionResults");
+
+  if (!topic) {
+    results.innerHTML = "<p>Please enter a video topic!</p>";
+    return;
+  }
+
+  const description = `
+    <h3>✨ Your YouTube Description</h3>
+    <p>Welcome to our channel! 🎉</p>
+    <p>In this video, we explore ${topic} and share useful tips, ideas, and information to help you learn more.</p>
+    <p>👍 If you enjoy this video, don't forget to LIKE, SHARE and SUBSCRIBE!</p>
+    <p>🔔 Turn on notifications so you never miss our new videos!</p>
+    <p>#${topic.replace(/[^a-zA-Z0-9]/g, "")} #YouTube #Tips
+    </p>
+  `;
+
+  results.innerHTML = description;
   }
 </script>
   
