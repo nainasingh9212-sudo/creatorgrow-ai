@@ -6,50 +6,214 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CreatorGrow AI | Grow Organically</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#080d18;color:white}
-header{
-padding:8px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #263044;
-background:#080f1d;
-position:sticky;
-top:0;
-z-index:1000;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.logo{font-size:23px;font-weight:bold;color:#fff}
-.logo s
-nav a{color:#ffffff;text-decoration:none;margin-left:18px;font-size:14px}
-.hero{text-align:center;padding:90px 20px 75px;background:radial-gradient(circle at top,#172b50,#080d18 65%)}
-.tag{color:#55b7ff;font-size:13px;letter-spacing:2px}
-h1{font-size:clamp(36px,7vw,65px);margin:22px auto;max-width:850px;line-height:1.12}
-h1 span{color:#ff3045}
-.hero p{color:#b8c2d4;font-size:17px;line-height:1.7;max-width:650px;margin:0 auto 30px}
-.btn{display:inline-block;background:#ff3045;color:white;text-decoration:none;padding:15px 27px;border-radius:9px;font-weight:bold}
-.section{padding:55px 7%;text-align:center}
-.section h2{font-size:32px;margin-bottom:12px}
-.sub{color:#aab5c8;margin-bottom:30px}
-..cards{
-display:grid;
-grid-template-columns:repeat(4,minmax(0,1fr));
-gap:18px;
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080d18;
+  color: white;
 }
-nav a{margin-left:8px;font-size:12px}
-.cards{grid-template-columns:repeat(2,minmax(0,1fr));}
+
+/* HEADER */
+header {
+  padding: 8px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #263044;
+  background: #080f1d;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-@media(max-width:600px){
-.cards{grid-template-columns:1fr;}
+
+.logo img {
+  display: block;
+  height: 85px;
+  width: auto;
 }
-.card{background:#111b2d;border:1px solid #293b58;border-radius:15px;padding:27px;text-align:left}
-.card .emoji{font-size:30px}
-.card h3{margin:15px 0 10px}
-.card p{color:#aab5c8;line-height:1.6;font-size:14px}
-.cta{background:#111b2d;margin:20px 7% 55px;padding:40px 20px;border-radius:18px;text-align:center}
-.cta p{color:#b8c2d4;margin:15px 0 25px}
-footer{text-align:center;padding:25px;color:#8995aa;border-top:1px solid #263044;font-size:13px}
-@media(max-width:600px){header{display:flex;flex-direction:row;justify-content:space-between;align-items:center;flex-wrap:nowrap}.logo{flex-shrink:0}nav{margin-left:auto;white-space:nowrap}nav a{margin-left:8px;font-size:12px}.hero{padding-top:65px}}
+
+header nav a,
+header nav a:visited {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+header nav a:hover {
+  color: #55b7ff;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 90px 20px 75px;
+  background: radial-gradient(circle at top, #172b50, #080d18 65%);
+}
+
+.tag {
+  color: #55b7ff;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: clamp(36px, 7vw, 65px);
+  margin: 22px auto;
+  max-width: 850px;
+  line-height: 1.12;
+}
+
+h1 span {
+  color: #ff3045;
+}
+
+.hero p {
+  color: #b8c2d4;
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff3045;
+  color: white;
+  text-decoration: none;
+  padding: 15px 27px;
+  border-radius: 9px;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+  padding: 55px 7%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.sub {
+  color: #aab5c8;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: #111b2d;
+  border: 1px solid #293b58;
+  border-radius: 15px;
+  padding: 27px;
+  text-align: left;
+}
+
+.card .emoji {
+  font-size: 30px;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+}
+
+.card p {
+  color: #aab5c8;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* CTA */
+.cta {
+  background: #111b2d;
+  margin: 20px 7% 55px;
+  padding: 40px 20px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.cta p {
+  color: #b8c2d4;
+  margin: 15px 0 25px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #8995aa;
+  border-top: 1px solid #263044;
+  font-size: 13px;
+}
+
+footer nav {
+  margin-top: 15px;
+}
+
+footer nav a {
+  color: #b8c2d4;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  header {
+    padding: 8px 4%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .logo {
+    flex-shrink: 0;
+  }
+
+  .logo img {
+    height: 85px;
+    width: auto;
+  }
+
+  header nav {
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  header nav a,
+  header nav a:visited {
+    margin-left: 8px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding-top: 65px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+   }
 </style>
 </head>
 <body>
