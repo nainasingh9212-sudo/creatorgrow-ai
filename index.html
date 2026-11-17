@@ -21,7 +21,17 @@ h1 span{color:#ff3045}
 .section{padding:55px 7%;text-align:center}
 .section h2{font-size:32px;margin-bottom:12px}
 .sub{color:#aab5c8;margin-bottom:30px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+..cards{
+display:grid;
+grid-template-columns:repeat(4,minmax(0,1fr));
+gap:18px;
+}
+@media(max-width:900px){
+.cards{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media(max-width:600px){
+.cards{grid-template-columns:1fr;}
+}
 .card{background:#111b2d;border:1px solid #293b58;border-radius:15px;padding:27px;text-align:left}
 .card .emoji{font-size:30px}
 .card h3{margin:15px 0 10px}
