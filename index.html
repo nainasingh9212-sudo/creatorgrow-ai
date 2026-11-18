@@ -435,6 +435,98 @@ footer nav a {
   }
 }
 
+/* ===== CREATORGROW AI PREMIUM HERO ===== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 95px 7% 75px;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(112,72,255,0.28), transparent 45%),
+    radial-gradient(ellipse at 85% 30%, rgba(255,48,120,0.18), transparent 40%),
+    linear-gradient(135deg, #0B1020, #171B3A, #0B1020);
+  border-radius: 0 0 30px 30px;
+}
+
+.hero .tag {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid rgba(170,120,255,0.5);
+  border-radius: 30px;
+  background: rgba(112,72,255,0.12);
+  color: #C7A8FF;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+}
+
+.hero h1 {
+  max-width: 850px;
+  margin: 28px auto;
+  font-size: clamp(36px, 6vw, 62px);
+  line-height: 1.15;
+  color: #FFFFFF;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #8B68FF, #FF65B3, #FF3045);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 680px;
+  margin: 0 auto 32px;
+  color: #B8C2D8;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.hero .btn {
+  background: linear-gradient(90deg, #7048FF, #D946EF, #FF3045);
+  padding: 17px 32px;
+  border-radius: 30px;
+  box-shadow: 0 8px 30px rgba(180,70,255,0.35);
+}
+
+.hero-tools {
+  max-width: 950px;
+  margin: 55px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.hero-tool {
+  background: rgba(25,30,65,0.75);
+  border: 1px solid rgba(130,120,255,0.35);
+  border-radius: 18px;
+  padding: 25px 12px;
+  backdrop-filter: blur(12px);
+}
+
+.hero-tool:hover {
+  border-color: #D946EF;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 65px 5% 45px;
+  }
+
+  .hero-tools {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 38px;
+  }
+
+  .hero-tool {
+    padding: 20px 8px;
+  }
+}
+  
 </style>
 </head>
 <body>
