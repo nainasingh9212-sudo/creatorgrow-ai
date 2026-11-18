@@ -607,7 +607,56 @@ footer nav a {
     grid-template-columns: 1fr;
   }
 }
+  /* ===== PREMIUM ABOUT SECTION ===== */
+
+#about {
+  max-width: 1100px;
+  margin: 65px auto;
+  padding: 65px 7%;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(112,72,255,0.20), transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(217,70,239,0.15), transparent 45%),
+    linear-gradient(145deg, #171B3A, #0B1020);
+  border: 1px solid rgba(112,72,255,0.45);
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+}
+
+#about h2 {
+  color: #FFFFFF;
+  font-size: clamp(27px, 4vw, 38px);
+  margin-bottom: 15px;
+}
+
+#about .sub {
+  color: #D946EF;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+#about p {
+  color: #B8C2D8;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 750px;
+  margin: 12px auto;
+}
+
+@media (max-width: 600px) {
+  #about {
+    margin: 40px 15px;
+    padding: 40px 22px;
+  }
+
+  #about p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+    }
 </style>
+  
 </head>
 <body>
 <header>
