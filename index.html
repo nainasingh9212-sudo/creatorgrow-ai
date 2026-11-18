@@ -526,7 +526,87 @@ footer nav a {
     padding: 20px 8px;
   }
 }
-  
+  /* ===== CREATORGROW AI PREMIUM TOOLS CARDS ===== */
+
+#tools {
+  padding: 75px 7%;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(112,72,255,0.13), transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(217,70,239,0.10), transparent 45%);
+}
+
+#tools h2 {
+  color: #FFFFFF;
+  font-size: clamp(28px, 4vw, 40px);
+  margin-bottom: 12px;
+}
+
+#tools .sub {
+  color: #B8C2D8;
+  margin-bottom: 38px;
+  line-height: 1.7;
+}
+
+#tools .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+#tools .card {
+  background: linear-gradient(145deg, #171B3A, #10182D);
+  border: 1px solid rgba(112,72,255,0.4);
+  border-radius: 20px;
+  padding: 30px 20px;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
+
+#tools .card:hover {
+  transform: translateY(-7px);
+  border-color: #D946EF;
+  box-shadow: 0 12px 30px rgba(112,72,255,0.22);
+}
+
+#tools .emoji {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+#tools .card h3 {
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+#tools .card p {
+  color: #B8C2D8;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  #tools {
+    padding: 55px 5%;
+  }
+
+  #tools .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  #tools .card {
+    padding: 23px 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  #tools .cards {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
