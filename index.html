@@ -1335,5 +1335,17 @@ function generateHashtags() {
     <a href="#terms">Terms & Conditions</a>
   </nav>
  </footer> 
+  <script>
+const selectableSections = document.querySelectorAll(
+  ".cta, #about, #video-generator, #title-generator, #seo-tags, #description-generator, #hashtag-generator"
+);
+
+selectableSections.forEach(section => {
+  section.addEventListener("click", () => {
+    selectableSections.forEach(item => item.classList.remove("tap-selected"));
+    section.classList.add("tap-selected");
+  });
+});
+  </script>
 </body>
 </html>
