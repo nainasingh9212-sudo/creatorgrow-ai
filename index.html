@@ -1598,7 +1598,18 @@ if (headerNav && !headerNav.querySelector('[href="#home"]')) {
 }
 
 showPage("home");
-    
+   const selectableSections = document.querySelectorAll(
+  "#about, #contact, #privacy, #terms"
+);
+
+selectableSections.forEach(section => {
+  section.addEventListener("click", () => {
+    selectableSections.forEach(item =>
+      item.classList.remove("tap-selected")
+    );
+    section.classList.add("tap-selected");
+  });
+}); 
   </script>
 </body>
 </html>
