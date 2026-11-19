@@ -222,20 +222,43 @@ footer nav a {
     grid-template-columns: 1fr;
   }
    }
-  /* ABOUT SECTION IMPROVEMENT */
+  /* PREMIUM ABOUT SECTION */
+
 #about {
-  padding: 35px 7%;
+  padding: 45px 7%;
+  margin: 35px 7%;
+  background: linear-gradient(145deg, #171B3A, #10182D);
+  border: 1px solid rgba(112,72,255,0.45);
+  border-radius: 25px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+  transition: all 0.3s ease;
 }
 
 #about h2 {
-  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: clamp(26px, 5vw, 38px);
+  margin-bottom: 12px;
 }
 
 #about .sub {
-  margin-bottom: 22px;
+  color: #D946EF;
+  font-size: 17px;
+  margin-bottom: 25px;
 }
 
 #about p:not(.sub) {
+  max-width: 700px;
+  margin: 0 auto 14px;
+  line-height: 1.8;
+  color: #b8c2d4;
+}
+
+@media (max-width: 600px) {
+  #about {
+    margin: 25px 15px;
+    padding: 35px 18px;
+  }
+}
   max-width: 700px;
   margin: 0 auto 14px;
   line-height: 1.7;
