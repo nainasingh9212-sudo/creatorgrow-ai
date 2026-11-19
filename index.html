@@ -886,6 +886,37 @@ header {
     padding: 35px 18px !important;
   }
   }
+  /* PREMIUM GENERATOR BUTTONS */
+
+#video-generator button,
+#title-generator button,
+#seo-tags button,
+#description-generator button,
+#hashtag-generator button {
+  background: linear-gradient(90deg, #7048FF, #D946EF, #FF3045) !important;
+  border: none !important;
+  box-shadow: 0 8px 25px rgba(180,70,255,0.30);
+  cursor: pointer;
+}
+  /* PINK BORDER ON GENERATOR TAP */
+
+#video-generator,
+#title-generator,
+#seo-tags,
+#description-generator,
+#hashtag-generator {
+  border: 1px solid rgba(112, 72, 255, 0.5) !important;
+  transition: all 0.3s ease;
+}
+
+#video-generator:focus-within,
+#title-generator:focus-within,
+#seo-tags:focus-within,
+#description-generator:focus-within,
+#hashtag-generator:focus-within {
+  border-color: #D946EF !important;
+  box-shadow: 0 0 18px rgba(217, 70, 239, 0.35);
+}
 </style>
   
 </head>
