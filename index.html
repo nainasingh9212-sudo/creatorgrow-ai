@@ -1528,16 +1528,76 @@ function generateHashtags() {
   </nav>
  </footer> 
   <script>
-const selectableSections = document.querySelectorAll(
-  ".cta, #about, #contact, #privacy, #terms, #video-generator, #title-generator, #seo-tags, #description-generator, #hashtag-generator"
+
+const toolIds = [
+  "tools",
+  "video-generator",
+  "title-generator",
+  "seo-tags",
+  "description-generator",
+  "hashtag-generator"
+];
+
+const pageIds = ["about", "contact", "privacy", "terms"];
+
+const sections = Array.from(
+  document.querySelectorAll("body > section")
 );
 
-selectableSections.forEach(section => {
-  section.addEventListener("click", () => {
-    selectableSections.forEach(item => item.classList.remove("tap-selected"));
-    section.classList.add("tap-selected");
+function showPage(page) {
+  sections.forEach(section => {
+    const id = section.id;
+
+    const isTool = toolIds.includes(id);
+    const isSpecialPage = pageIds.includes(id);
+
+    if (page === "home") {
+      section.style.display =
+        (!isTool && !isSpecialPage) ? "" : "none";
+    } 
+    else if (page === "tools") {
+      section.style.display = isTool ? "" : "none";
+    } 
+    else {
+      section.style.display = id === page ? "" : "none";
+    }
   });
+
+  window.scrollTo(0, 0);
+}
+
+document.addEventListener("click", function(event) {
+  const link = event.target.closest('a[href^="#"]');
+
+  if (!link) return;
+
+  const target = link.getAttribute("href").substring(1);
+
+  if (target === "home") {
+    event.preventDefault();
+    showPage("home");
+  } 
+  else if (toolIds.includes(target)) {
+    event.preventDefault();
+    showPage("tools");
+  } 
+  else if (pageIds.includes(target)) {
+    event.preventDefault();
+    showPage(target);
+  }
 });
+
+const headerNav = document.querySelector("header nav");
+
+if (headerNav && !headerNav.querySelector('[href="#home"]')) {
+  const homeLink = document.createElement("a");
+  homeLink.href = "#home";
+  homeLink.textContent = "Home";
+  headerNav.prepend(homeLink);
+}
+
+showPage("home");
+    
   </script>
 </body>
 </html>
