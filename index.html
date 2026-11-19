@@ -1563,8 +1563,14 @@ function showPage(page) {
     }
   });
 
+  if (page === "home") {
+  document.querySelector(".hero").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+} else {
   window.scrollTo(0, 0);
-}
+  }
 
 document.addEventListener("click", function(event) {
   const link = event.target.closest('a[href^="#"]');
