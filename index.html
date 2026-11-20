@@ -1493,6 +1493,7 @@ header {
 
   </section>
 <script>
+
 function generateIdeas() {
   const niche = document.getElementById("niche").value.trim();
   const output = document.getElementById("ideas");
@@ -1503,16 +1504,26 @@ function generateIdeas() {
   }
 
   const templates = [
-    "Top 10 " + niche + " Tips for Beginners",
-    "5 Common " + niche + " Mistakes to Avoid",
-    "The Ultimate " + niche + " Guide",
-    "How to Improve Your " + niche + " Skills",
-    "Amazing " + niche + " Facts You Should Know"
+    "I Tried " + niche + " for 7 Days - Here's What Happened!",
+    "5 " + niche + " Mistakes Beginners Should Avoid",
+    "The Ultimate Beginner's Guide to " + niche,
+    "Top 7 " + niche + " Hacks You Need to Know",
+    niche + " Challenge: Can You Do It?",
+    "Before You Start " + niche + ", Watch This!",
+    "Myth vs Reality: The Truth About " + niche,
+    "5 Things Nobody Tells You About " + niche,
+    "Easy " + niche + " Ideas for Beginners",
+    "How to Get Better at " + niche + " in 30 Days",
+    "The Biggest " + niche + " Mistakes I Made",
+    niche + " Tips That Can Save You Time"
   ];
 
   output.innerHTML = "<h3>Your Video Ideas 🎯</h3>" +
-    templates.map((idea, i) => "<p>" + (i + 1) + ". " + idea + "</p>").join("");
+    templates.map((idea, i) =>
+      "<p>" + (i + 1) + ". " + idea + "</p>"
+    ).join("");
 }
+  
 function generateTitles() {
   const topic = document.getElementById("videoTopic").value.trim();
   const results = document.getElementById("titleResults");
