@@ -1567,6 +1567,7 @@ function generateIdeas() {
   
   
   
+
 function generateTitles() {
   const topic = document.getElementById("videoTopic").value.trim();
   const results = document.getElementById("titleResults");
@@ -1576,17 +1577,60 @@ function generateTitles() {
     return;
   }
 
-  const titles = [
-    `10 Amazing Facts About ${topic}`,
-    `How to Master ${topic} - Beginner's Guide`,
-    `The Truth About ${topic}`,
-    `${topic}: 5 Mistakes You Must Avoid`,
-    `Best Tips and Tricks for ${topic}`
+  const subject = topic.charAt(0).toUpperCase() + topic.slice(1);
+
+  const templates = [
+    "10 Amazing Facts About " + subject,
+    "How to Master " + subject + " - Beginner's Guide",
+    "The Truth About " + subject,
+    "5 " + subject + " Mistakes You Must Avoid",
+    "Best Tips and Tricks for " + subject,
+    "I Tried " + subject + " for 7 Days!",
+    "Before You Start " + subject, "Watch This!",
+    "The Ultimate Guide to " + subject,
+    "7 Secrets About " + subject + " Nobody Tells You",
+    "Can You Master " + subject + " in 30 Days?",
+    "Beginner vs Expert: " + subject,
+    "Stop Making These " + subject + " Mistakes",
+    "5 Easy Ways to Improve Your " + subject,
+    "What Happens When You Try " + subject?",
+    "The Biggest Myths About " + subject,
+    "My Top 10 " + subject + " Tips",
+    "Things I Wish I Knew About " + subject,
+    "Is " + subject + " Really Worth It?",
+    "How I Learned " + subject + " - My Experience",
+    "3 Simple " + subject + " Hacks That Actually Work",
+    "The Best Way to Start " + subject,
+    "Nobody Talks About These " + subject + " Secrets",
+    "I Tested Popular " + subject + " Tips!",
+    "5 Things Every " + subject + " Beginner Should Know",
+    subject + " on a Budget: What You Need to Know",
+    "The Do's and Don'ts of " + subject,
+    "Can Beginners Really Succeed at " + subject + "?",
+    "My Biggest " + subject + " Lessons",
+    "One Day Challenge: Learning " + subject,
+    "Watch This Before Trying " + subject
   ];
 
-  results.innerHTML = "<h3>✨ Your Video Titles</h3>" +
-    titles.map((title, i) => `<p>${i + 1}. ${title}</p>`).join("");
+  function shuffleArray(array) {
+    const shuffled = [...array];
+
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    return shuffled;
   }
+
+  const selectedTitles = shuffleArray(templates).slice(0, 10);
+
+  results.innerHTML = "<h3>✨ Your Video Titles</h3>" +
+    selectedTitles.map((title, i) =>
+      "<p>" + (i + 1) + ". " + title + "</p>"
+    ).join("");
+       }
+  
   function generateTags() {
   const topic = document.getElementById("tagTopic").value.trim();
   const results = document.getElementById("tagResults");
