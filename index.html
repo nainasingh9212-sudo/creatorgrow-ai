@@ -1494,6 +1494,7 @@ header {
   </section>
 <script>
 
+
 function generateIdeas() {
   const niche = document.getElementById("niche").value.trim();
   const output = document.getElementById("ideas");
@@ -1503,26 +1504,68 @@ function generateIdeas() {
     return;
   }
 
+  const topic = niche.charAt(0).toUpperCase() + niche.slice(1);
+
   const templates = [
-    "I Tried " + niche + " for 7 Days - Here's What Happened!",
-    "5 " + niche + " Mistakes Beginners Should Avoid",
-    "The Ultimate Beginner's Guide to " + niche,
-    "Top 7 " + niche + " Hacks You Need to Know",
-    niche + " Challenge: Can You Do It?",
-    "Before You Start " + niche + ", Watch This!",
-    "Myth vs Reality: The Truth About " + niche,
-    "5 Things Nobody Tells You About " + niche,
-    "Easy " + niche + " Ideas for Beginners",
-    "How to Get Better at " + niche + " in 30 Days",
-    "The Biggest " + niche + " Mistakes I Made",
-    niche + " Tips That Can Save You Time"
+    "I Tried " + topic + " for 7 Days - Here's What Happened!",
+    "5 " + topic + " Mistakes Beginners Should Avoid",
+    "The Ultimate Beginner's Guide to " + topic,
+    "Top 7 " + topic + " Hacks You Need to Know",
+    topic + " Challenge: Can You Do It?",
+    "Before You Start " + topic + ", Watch This!",
+    "Myth vs Reality: The Truth About " + topic,
+    "5 Things Nobody Tells You About " + topic,
+    "Easy " + topic + " Ideas for Beginners",
+    "How to Get Better at " + topic + " in 30 Days",
+    "The Biggest " + topic + " Mistakes I Made",
+    topic + " Tips That Can Save You Time",
+    "10 Secrets to Mastering " + topic,
+    "Beginner vs Expert " + topic + " - What's the Difference?",
+    "Can You Learn " + topic + " in One Day?",
+    "7 Must-Know Facts About " + topic,
+    "The Best Way to Start " + topic,
+    "Things I Wish I Knew Before Learning " + topic,
+    "My Top 5 Favorite " + topic + " Tips",
+    "How I Improved My " + topic + " Skills",
+    topic + " on a Budget: Easy Tips",
+    "Do These 5 Things to Improve Your " + topic,
+    "The Most Common Questions About " + topic,
+    "A Day in My Life: " + topic,
+    "3 Simple " + topic + " Tricks Everyone Should Know",
+    "I Tested Popular " + topic + " Tips",
+    "Stop Making These " + topic + " Mistakes",
+    "The Future of " + topic + ": What to Know",
+    "5 Fun " + topic + " Ideas for YouTube Shorts",
+    "Can Beginners Really Master " + topic + "?"
   ];
 
+  function shuffleArray(array) {
+    const shuffled = [...array];
+
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    return shuffled;
+  }
+
+  const previousIdeas = generateIdeas.lastIdeas || [];
+  const availableIdeas = templates.filter(
+    idea => !previousIdeas.includes(idea)
+  );
+
+  const selectedIdeas = shuffleArray(availableIdeas).slice(0, 12);
+
+  generateIdeas.lastIdeas = selectedIdeas;
+
   output.innerHTML = "<h3>Your Video Ideas 🎯</h3>" +
-    templates.map((idea, i) =>
+    selectedIdeas.map((idea, i) =>
       "<p>" + (i + 1) + ". " + idea + "</p>"
     ).join("");
 }
+  
+  
   
 function generateTitles() {
   const topic = document.getElementById("videoTopic").value.trim();
