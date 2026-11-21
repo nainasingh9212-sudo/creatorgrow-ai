@@ -1931,7 +1931,8 @@ function generateTags() {
     ).join(", ") + "</p>";
 }
   
-  function generateDescription() {
+  
+function generateDescription() {
   const topic = document.getElementById("descriptionTopic").value.trim();
   const results = document.getElementById("descriptionResults");
 
@@ -1940,18 +1941,29 @@ function generateTags() {
     return;
   }
 
-  const description = `
-    <h3>✨ Your YouTube Description</h3>
-    <p>Welcome to our channel! 🎉</p>
-    <p>In this video, we explore ${topic} and share useful tips, ideas, and information to help you learn more.</p>
-    <p>👍 If you enjoy this video, don't forget to LIKE, SHARE and SUBSCRIBE!</p>
-    <p>🔔 Turn on notifications so you never miss our new videos!</p>
-    <p>#${topic.replace(/[^a-zA-Z0-9]/g, "")} #YouTube #Tips
-    </p>
-  `;
+  const descriptions = [
+    `Welcome to our channel! 🎉 Today we are exploring ${topic}. Watch till the end for useful tips and ideas!`,
+    `Want to learn about ${topic}? You're in the right place! Join us and discover something new today!`,
+    `In this video, we share everything you need to know about ${topic}. Don't miss these helpful insights!`,
+    `Let's make learning ${topic} easy and fun! Watch, learn and share your thoughts in the comments.`,
+    `Discover the best tips and tricks about ${topic}. Enjoy the video and subscribe for more content!`,
+    `Are you interested in ${topic}? This video is made for you. Let's get started!`,
+    `Learn something new today with our guide to ${topic}. Like and subscribe for more videos!`,
+    `Here are some exciting ideas about ${topic}. Watch now and tell us your favorite part!`,
+    `Ready to explore ${topic}? Stay with us for helpful information and fresh inspiration!`,
+    `Thanks for watching! Today we're talking about ${topic}. Subscribe and turn on notifications for more!`
+  ];
 
-  results.innerHTML = description;
-  }
+  const description = descriptions[Math.floor(Math.random() * descriptions.length)];
+
+  results.innerHTML =
+    "<h3>✨ Your YouTube Description</h3>" +
+    "<p>" + description + "</p>" +
+    "<p>👍 Like, Share & Subscribe!</p>" +
+    "<p>🔔 Turn on notifications for new videos!</p>" +
+    "<p>#YouTube #Tips #ContentCreator</p>";
+}
+  
 function generateHashtags() {
   const topic = document.getElementById("hashtagTopic").value.trim();
   const results = document.getElementById("hashtagResults");
