@@ -1990,13 +1990,32 @@ function generateDescription() {
 
   const description = descriptions[Math.floor(Math.random() * descriptions.length)];
 
-  results.innerHTML =
+  window.currentDescription = description;
+
+results.innerHTML =
     "<h3>✨ Your YouTube Description</h3>" +
     "<p>" + description + "</p>" +
     "<p>👍 Like, Share & Subscribe!</p>" +
     "<p>🔔 Turn on notifications for new videos!</p>" +
-    "<p>#YouTube #Tips #ContentCreator</p>";
-}
+    "<p>#YouTube #Tips #ContentCreator</p>" +
+    "<button onclick='copyDescription()'>📋 Copy Description</button>";
+}function copyDescription() {
+  const description = window.currentDescription;
+
+  if (!description) {
+    alert("Please generate a description first!");
+    return;
+  }
+
+  const fullDescription = description +
+    "\n👍 Like, Share & Subscribe!" +
+    "\n🔔 Turn on notifications for new videos!" +
+    "\n#YouTube #Tips #ContentCreator";
+
+  navigator.clipboard.writeText(fullDescription)
+    .then(() => alert("Description copied successfully! 📋"))
+    .catch(() => alert("Copy failed. Please try again."));
+  }
   
 
 function generateHashtags() {
