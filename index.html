@@ -300,48 +300,71 @@ footer nav a {
   }
   }
   
-/* PREMIUM HERO DESIGN */
+
+/* ===== CREATORGROW AI PREMIUM SAAS HERO ===== */
+
 .hero {
   position: relative;
   overflow: hidden;
-  padding: 85px 7% 55px;
-  background: radial-gradient(circle at 50% 0%, #203b68, #111a30 55%, #080d18 100%);
-  border-radius: 0 0 30px 30px;
+  text-align: center;
+  padding: 65px 6% 45px !important;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(124, 92, 255, 0.20), transparent 55%),
+    linear-gradient(135deg, #080D1C, #11162B 55%, #090D19) !important;
+  border-radius: 0 0 28px 28px;
 }
 
 .hero .tag {
   display: inline-block;
-  background: rgba(85, 183, 255, 0.10);
-  border: 1px solid rgba(85, 183, 255, 0.35);
-  padding: 10px 18px;
+  color: #C4B5FD;
+  background: rgba(139, 92, 246, 0.10);
+  border: 1px solid rgba(167, 139, 250, 0.30);
+  padding: 9px 18px;
   border-radius: 30px;
-  color: #55b7ff;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: 1.5px;
 }
 
 .hero h1 {
-  font-size: 34px;
+  color: #FFFFFF;
+  font-size: clamp(36px, 6vw, 58px) !important;
   line-height: 1.15;
-  margin: 25px auto;
+  margin: 24px auto 16px;
+  max-width: 850px;
 }
 
 .hero h1 span {
-  color: #ff3045;
-  text-shadow: 0 0 22px rgba(255, 48, 69, 0.25);
+  background: linear-gradient(90deg, #A78BFA, #D8B4FE);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
 }
 
 .hero p {
+  color: #AAB5CC;
   max-width: 680px;
-  margin: 0 auto 30px;
+  margin: 0 auto 26px;
   font-size: 17px;
-  line-height: 1.8;
-  color: #b8c2d4;
+  line-height: 1.7;
 }
 
 .hero .btn {
-  padding: 16px 30px;
-  box-shadow: 0 6px 25px rgba(255, 48, 69, 0.35);
+  display: inline-block;
+  background: linear-gradient(110deg, #7C3AED, #8B5CF6);
+  color: #FFFFFF;
+  padding: 15px 29px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.25);
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.35);
 }
 
 .hero-tools {
@@ -349,15 +372,20 @@ footer nav a {
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   max-width: 850px;
-  margin: 55px auto 0;
+  margin: 38px auto 0 !important;
 }
 
 .hero-tool {
-  background: rgba(17, 27, 45, 0.85);
-  border: 1px solid #293f60;
+  background: rgba(25, 32, 57, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 16px;
   padding: 22px 10px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.hero-tool:hover {
+  transform: translateY(-4px);
+  border-color: #A78BFA;
 }
 
 .hero-tool span {
@@ -365,48 +393,109 @@ footer nav a {
   font-size: 30px;
   margin-bottom: 12px;
 }
-  
+
 .hero-tool h3 {
-  color: white;
+  color: #F8FAFC;
   font-size: 15px;
 }
 
-.hero-tool:hover {
-  transform: translateY(-5px);
-  border-color: #55b7ff;
+.hero-trust {
+  margin: 30px auto 0;
+  max-width: 850px;
+  text-align: center;
 }
+
+.hero-trust h3 {
+  color: #C4B5FD;
+  font-size: 21px;
+  margin-bottom: 16px;
+}
+
+.trust-points {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.trust-points div {
+  background: rgba(25, 32, 57, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.20);
+  border-radius: 12px;
+  padding: 11px 17px;
+  color: #F8FAFC;
+  font-size: 14px;
+}
+
+/* MOBILE SAAS DESIGN */
 
 @media (max-width: 600px) {
   .hero {
-  padding: 25px 5% 25px;
+    padding: 42px 5% 30px !important;
+  }
+
+  .hero .tag {
+    font-size: 10px;
+    padding: 8px 12px;
+    letter-spacing: 1px;
   }
 
   .hero h1 {
-    font-size: 34px;
+    font-size: 30px !important;
+    line-height: 1.18;
+    margin: 20px auto 13px !important;
   }
 
   .hero p {
-    font-size: 16px;
+    font-size: 14px !important;
+    line-height: 1.6;
+    margin-bottom: 20px !important;
+  }
+
+  .hero .btn {
+    padding: 13px 20px !important;
+    font-size: 14px;
+    position: static;
   }
 
   .hero-tools {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 28px !important;
   }
-    .hero .btn {
-    position: relative;
-    top: -8px;
-    }
 
   .hero-tool {
-    padding: 18px 8px;
+    padding: 16px 7px !important;
+  }
+
+  .hero-tool span {
+    font-size: 25px;
+    margin-bottom: 8px;
   }
 
   .hero-tool h3 {
-    font-size: 14px;
+    font-size: 13px !important;
+  }
+
+  .hero-trust {
+    margin-top: 22px;
+  }
+
+  .hero-trust h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .trust-points {
+    gap: 8px;
+  }
+
+  .trust-points div {
+    padding: 9px 11px;
+    font-size: 12px;
   }
 }
+  
   
 /* PREMIUM PRIVACY & TERMS DESIGN */
 #privacy {
