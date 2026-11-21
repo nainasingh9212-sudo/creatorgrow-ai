@@ -1885,6 +1885,19 @@ results.innerHTML = "<h3>✨ Your Video Titles</h3>" +
 window.currentTitles = selectedTitles;
   
        }
+function copyTitles() {
+  const titles = window.currentTitles;
+
+  if (!titles || titles.length === 0) {
+    alert("Please generate titles first!");
+    return;
+  }
+
+  navigator.clipboard.writeText(titles.join("\n"))
+    .then(() => alert("Titles copied successfully! 📋"))
+    .catch(() => alert("Copy failed. Please try again."));
+}
+  
   
   
 function generateTags() {
