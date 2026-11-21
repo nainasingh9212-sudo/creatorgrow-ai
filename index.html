@@ -2049,11 +2049,25 @@ function generateHashtags() {
   const shuffled = [...extraTags].sort(() => Math.random() - 0.5);
   const hashtags = [mainTag, ...shuffled.slice(0, 7)];
 
-  results.innerHTML = "<h3>✨ Your YouTube Hashtags</h3>" +
+  window.currentHashtags = hashtags;
+
+results.innerHTML = "<h3>✨ Your YouTube Hashtags</h3>" +
     hashtags.map(tag =>
       "<span style='margin:5px; display:inline-block;'>" + tag + "</span>"
-    ).join("");
-}
+    ).join("") +
+    "<button onclick='copyHashtags()'>📋 Copy Hashtags</button>";
+}function copyHashtags() {
+  const hashtags = window.currentHashtags;
+
+  if (!hashtags || hashtags.length === 0) {
+    alert("Please generate hashtags first!");
+    return;
+  }
+
+  navigator.clipboard.writeText(hashtags.join(" "))
+    .then(() => alert("Hashtags copied successfully! 📋"))
+    .catch(() => alert("Copy failed. Please try again."));
+  }
   
   
 </script>
