@@ -1941,12 +1941,28 @@ function generateTags() {
   const shuffled = formats.sort(() => Math.random() - 0.5);
   const tags = shuffled.slice(0, 15);
 
-  results.innerHTML = "<h3>✨ Your SEO Tags</h3>" +
-    "<p>" + tags.map(tag =>
-      tag.replace(/&/g, "&amp;")
-         .replace(/</g, "&lt;")
-         .replace(/>/g, "&gt;")
-    ).join(", ") + "</p>";
+
+window.currentTags = tags;
+
+results.innerHTML = "<h3>✨ Your SEO Tags</h3>" +
+  "<p>" + tags.map(tag =>
+    tag.replace(/&/g, "&amp;")
+       .replace(/</g, "&lt;")
+       .replace(/>/g, "&gt;")
+  ).join(", ") + "</p>" +
+  "<button onclick='copyTags()'>📋 Copy SEO Tags</button>";
+  
+}function copyTags() {
+  const tags = window.currentTags;
+
+  if (!tags || tags.length === 0) {
+    alert("Please generate SEO tags first!");
+    return;
+  }
+
+  navigator.clipboard.writeText(tags.join(", "))
+    .then(() => alert("SEO Tags copied successfully! 📋"))
+    .catch(() => alert("Copy failed. Please try again."));
 }
   
   
