@@ -1964,11 +1964,12 @@ function generateDescription() {
     "<p>#YouTube #Tips #ContentCreator</p>";
 }
   
+
 function generateHashtags() {
   const topic = document.getElementById("hashtagTopic").value.trim();
   const results = document.getElementById("hashtagResults");
 
-  if (topic === "") {
+  if (!topic) {
     results.innerHTML = "Please enter your video topic!";
     return;
   }
@@ -1979,20 +1980,28 @@ function generateHashtags() {
     .split(/\s+/)
     .filter(Boolean);
 
-  const hashtags = [
-    "#" + words.join(""),
-    "#YouTube",
-    "#YouTubeShorts",
-    "#Trending",
-    "#ViralVideo",
-    "#ContentCreator",
-    "#NewVideo",
-    "#Subscribe"
+  const mainTag = "#" + words.join("");
+
+  const extraTags = [
+    "#YouTube", "#YouTubeShorts", "#Trending",
+    "#ViralVideo", "#ContentCreator", "#NewVideo",
+    "#Subscribe", "#VideoCreator", "#YouTubeTips",
+    "#GrowOnYouTube", "#ContentStrategy", "#CreatorTips",
+    "#VideoMarketing", "#DigitalCreator", "#LearnOnline",
+    "#DailyTips", "#ExploreMore", "#Tutorial",
+    "#OnlineGrowth", "#CreativeIdeas", "#WatchNow",
+    "#HelpfulTips", "#VideoOfTheDay", "#CreatorCommunity"
   ];
 
-  results.innerHTML = "<h3>Your YouTube Hashtags:</h3>" +
-    hashtags.map(tag => "<span style='margin:5px; display:inline-block;'>" + tag + "</span>").join("");
-  }
+  const shuffled = [...extraTags].sort(() => Math.random() - 0.5);
+  const hashtags = [mainTag, ...shuffled.slice(0, 7)];
+
+  results.innerHTML = "<h3>✨ Your YouTube Hashtags</h3>" +
+    hashtags.map(tag =>
+      "<span style='margin:5px; display:inline-block;'>" + tag + "</span>"
+    ).join("");
+}
+  
   
 </script>
    <section id="privacy" class="section">
