@@ -1875,10 +1875,15 @@ function generateTitles() {
 
   const selectedTitles = shuffleArray(templates).slice(0, 10);
 
-  results.innerHTML = "<h3>✨ Your Video Titles</h3>" +
-    selectedTitles.map((title, i) =>
-      "<p>" + (i + 1) + ". " + title + "</p>"
-    ).join("");
+  
+results.innerHTML = "<h3>✨ Your Video Titles</h3>" +
+  selectedTitles.map((title, i) =>
+    "<p>" + (i + 1) + ". " + title + "</p>"
+  ).join("") +
+  "<button onclick='copyTitles()'>📋 Copy Titles</button>";
+
+window.currentTitles = selectedTitles;
+  
        }
   
   
