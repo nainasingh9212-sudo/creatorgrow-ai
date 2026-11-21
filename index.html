@@ -1218,6 +1218,138 @@ header {
     padding-top: 20px !important;
   }
 }
+ 
+/* ===== CREATORGROW AI PREMIUM HERO ===== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 55px 5% 40px !important;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, 0.30), transparent 55%),
+    radial-gradient(ellipse at 10% 70%, rgba(236, 72, 153, 0.12), transparent 45%),
+    linear-gradient(135deg, #080d20, #171033 55%, #090d20) !important;
+}
+
+.hero .tag {
+  display: inline-block;
+  color: #D8B4FE;
+  font-size: 13px;
+  letter-spacing: 2px;
+  padding: 9px 18px;
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  border-radius: 30px;
+  background: rgba(139, 92, 246, 0.12);
+}
+
+.hero h1 {
+  color: #FFFFFF;
+  font-size: clamp(36px, 7vw, 65px);
+  line-height: 1.12;
+  margin: 22px auto 14px;
+  max-width: 850px;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #C084FC, #F0ABFC, #F9A8D4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  color: #C4C7DD;
+  font-size: 17px;
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto 24px;
+}
+
+.hero .btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #9333EA, #DB2777);
+  color: #FFFFFF;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.35);
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(219, 39, 119, 0.35);
+}
+
+.hero-tools {
+  margin: 35px auto 0 !important;
+  gap: 15px;
+}
+
+.hero-tool {
+  background: rgba(35, 27, 70, 0.85);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+.hero-tool:hover {
+  transform: translateY(-5px);
+  border-color: #D8B4FE;
+  box-shadow: 0 8px 22px rgba(139, 92, 246, 0.18);
+}
+
+.hero-trust h3 {
+  color: #D8B4FE;
+}
+
+.trust-points div {
+  background: rgba(35, 27, 70, 0.85);
+  border-color: rgba(168, 85, 247, 0.35);
+}
+
+/* MOBILE PREMIUM HERO */
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 38px 5% 28px !important;
+  }
+
+  .hero .tag {
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 7px 12px;
+  }
+
+  .hero h1 {
+    font-size: 30px !important;
+    line-height: 1.15;
+    margin: 18px auto 12px !important;
+  }
+
+  .hero p {
+    font-size: 14px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero .btn {
+    padding: 12px 21px !important;
+    font-size: 14px;
+    top: 0 !important;
+  }
+
+  .hero-tools {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 25px !important;
+  }
+
+  .hero-tool {
+    padding: 15px 6px !important;
+  }
+  }
   
 </style>
   
