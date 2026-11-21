@@ -1881,7 +1881,8 @@ function generateTitles() {
     ).join("");
        }
   
-  function generateTags() {
+  
+function generateTags() {
   const topic = document.getElementById("tagTopic").value.trim();
   const results = document.getElementById("tagResults");
 
@@ -1892,7 +1893,7 @@ function generateTitles() {
 
   const cleanTopic = topic.replace(/[^a-zA-Z0-9 ]/g, "").trim();
 
-  const tags = [
+  const formats = [
     cleanTopic,
     cleanTopic + " tips",
     cleanTopic + " tutorial",
@@ -1902,11 +1903,34 @@ function generateTitles() {
     cleanTopic + " ideas",
     cleanTopic + " guide",
     cleanTopic + " tricks",
-    cleanTopic + " videos"
+    cleanTopic + " shorts",
+    cleanTopic + " step by step",
+    cleanTopic + " mistakes",
+    cleanTopic + " hacks",
+    cleanTopic + " strategies",
+    cleanTopic + " examples",
+    "learn " + cleanTopic,
+    "easy " + cleanTopic,
+    "top " + cleanTopic,
+    cleanTopic + " explained",
+    cleanTopic + " for creators",
+    "ultimate " + cleanTopic + " guide",
+    cleanTopic + " tips and tricks",
+    cleanTopic + " tutorial 2026",
+    "beginner guide to " + cleanTopic
   ];
 
+  const shuffled = formats.sort(() => Math.random() - 0.5);
+  const tags = shuffled.slice(0, 15);
+
   results.innerHTML = "<h3>✨ Your SEO Tags</h3>" +
-    "<p>" + tags.map(tag => tag.replace(/</g, "&lt;").replace(/>/g, "&gt;")).join(", ") + "</p>";
+    "<p>" + tags.map(tag =>
+      tag.replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+    ).join(", ") + "</p>";
+}
+  
   }function generateDescription() {
   const topic = document.getElementById("descriptionTopic").value.trim();
   const results = document.getElementById("descriptionResults");
