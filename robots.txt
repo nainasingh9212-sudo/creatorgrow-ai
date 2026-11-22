@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nainasingh9212-sudo.github.io/creatorgrow-ai/sitemap.xml
