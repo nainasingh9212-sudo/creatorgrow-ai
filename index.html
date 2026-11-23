@@ -2236,6 +2236,7 @@ const toolIds = [
 ];
 
 const pageIds = ["about", "contact", "privacy", "terms"];
+const newPageIds = ["analytics", "tips", "help"];
 
 const sections = Array.from(
   document.querySelectorAll("main > section")
@@ -2246,13 +2247,14 @@ function showPage(page) {
     const id = section.id;
 
     const isTool = toolIds.includes(id);
-    const isSpecialPage = pageIds.includes(id);
+    const isSpecialPage =
+  pageIds.includes(id) || newPageIds.includes(id);
 
     if (page === "home") {
       section.style.display =
         (!isTool && !isSpecialPage) ? "" : "none";
     } 
-    else if (page === "tools") {
+    else if (pageIds.includes(target) || newPageIds.includes(target)) {
       section.style.display = isTool ? "" : "none";
     } 
     else {
