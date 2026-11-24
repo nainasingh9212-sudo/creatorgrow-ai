@@ -1585,6 +1585,60 @@ a[href^="mailto:"]:hover {
     font-size: 17px;
   }
   }
+  
+/* ===== PREMIUM TIPS & GUIDES PAGE ===== */
+
+#tips .cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 35px auto;
+}
+
+#tips .card {
+  background: linear-gradient(145deg, #171f3a, #10182d);
+  border: 1px solid rgba(112, 72, 255, 0.55);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 0 18px rgba(112, 72, 255, 0.12);
+  transition: 0.3s ease;
+  text-align: left;
+}
+
+#tips .card:hover {
+  border-color: #55b7ff;
+  box-shadow: 0 0 22px rgba(85, 183, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+#tips .card .emoji {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+#tips .card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+#tips .card p {
+  color: #b8c2d4;
+  line-height: 1.7;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  #tips .cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  #tips .card {
+    padding: 22px;
+  }
+}
+  
 </style>
   
 </head>
