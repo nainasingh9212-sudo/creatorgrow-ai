@@ -2254,7 +2254,7 @@ function showPage(page) {
       section.style.display =
         (!isTool && !isSpecialPage) ? "" : "none";
     } 
-    else if (pageIds.includes(target) || newPageIds.includes(target)) {
+  else if (page === "tools") {
       section.style.display = isTool ? "" : "none";
     } 
     else {
@@ -2281,7 +2281,7 @@ document.addEventListener("click", function(event) {
     event.preventDefault();
     showPage("tools");
   } 
-  else if (pageIds.includes(target)) {
+  else if (pageIds.includes(target) || newPageIds.includes(target)) {
     event.preventDefault();
     showPage(target);
   }
