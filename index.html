@@ -1638,6 +1638,59 @@ a[href^="mailto:"]:hover {
     padding: 22px;
   }
 }
+ 
+/* ===== PREMIUM HELP & SUPPORT PAGE ===== */
+
+#help .cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 35px auto;
+}
+
+#help .card {
+  background: linear-gradient(145deg, #171f3a, #10182d);
+  border: 1px solid rgba(112, 72, 255, 0.55);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 0 18px rgba(112, 72, 255, 0.12);
+  transition: 0.3s ease;
+  text-align: left;
+}
+
+#help .card:hover {
+  border-color: #55b7ff;
+  box-shadow: 0 0 22px rgba(85, 183, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+#help .card .emoji {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+#help .card h3 {
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+#help .card p {
+  color: #b8c2d4;
+  line-height: 1.7;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  #help .cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  #help .card {
+    padding: 22px;
+  }
+}
   
 </style>
   
@@ -2436,6 +2489,46 @@ results.innerHTML = "<h3>✨ Your YouTube Hashtags</h3>" +
   </div>
 
 </section>
+  
+<!-- HELP & SUPPORT PAGE -->
+<section class="section" id="help">
+
+  <div class="tag">✦ CREATORGROW AI SUPPORT</div>
+
+  <h2>Help & Support</h2>
+  <p class="sub">We're here to help you on your YouTube growth journey!</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="emoji">🚀</div>
+      <h3>How to Use CreatorGrow AI?</h3>
+      <p>Choose an AI tool, enter your video topic and generate helpful YouTube content ideas.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🛠️</div>
+      <h3>Common Problems</h3>
+      <p>If a tool does not work, refresh the page and check your internet connection.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">❓</div>
+      <h3>Frequently Asked Questions</h3>
+      <p>Our tools help creators generate video titles, descriptions, tags and hashtags.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">📩</div>
+      <h3>Contact Support</h3>
+      <p>Need assistance? Send us your questions by email.</p>
+      <a href="mailto:nainasingh9212@gmail.com" class="btn">Email Us</a>
+    </div>
+
+  </div>
+
+</section>
+  
   
 </main>
  <footer class="footer">
