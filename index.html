@@ -2993,7 +2993,34 @@ header:hover {
 header:active {
   border-color: #ff3045 !important;
 }
-  
+  /* ===== MOBILE HEADER ALIGNMENT ===== */
+@media (max-width: 700px) {
+  header {
+    padding: 8px 5%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .logo img {
+    height: 72px;
+    margin: 0 auto;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px 12px;
+    width: 100%;
+  }
+
+  header nav a {
+    font-size: 13px;
+    margin: 0;
+    padding: 5px 0;
+  }
+}
 </style>
   
 </head>
