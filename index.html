@@ -1691,6 +1691,144 @@ a[href^="mailto:"]:hover {
     padding: 22px;
   }
 }
+ 
+/* ===== CREATORGROW PREMIUM HERO ===== */
+
+.hero {
+  background:
+    radial-gradient(ellipse at 80% 35%, rgba(0,100,255,0.20), transparent 45%),
+    radial-gradient(ellipse at 15% 80%, rgba(255,0,35,0.13), transparent 45%),
+    #05070d !important;
+  padding: 45px 5% 35px !important;
+  text-align: left;
+  overflow: hidden;
+}
+
+.hero-main {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 20px;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.hero-copy {
+  text-align: left;
+}
+
+.hero .tag {
+  color: #ff5265;
+  border: 1px solid rgba(255,50,70,0.6);
+  background: rgba(255,0,35,0.10);
+}
+
+.hero-copy h1 {
+  color: white;
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.08;
+  margin: 20px 0;
+  font-weight: 900;
+}
+
+.hero-copy h1 span {
+  background: linear-gradient(90deg, #ff243d, #ff7b35);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-copy h2 {
+  color: #ffd43b;
+  font-size: clamp(22px, 3vw, 36px);
+  margin-bottom: 18px;
+}
+
+.hero-copy p {
+  color: #e0e6f3;
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0 0 25px;
+}
+
+.hero .btn {
+  background: linear-gradient(90deg, #ff1738, #e60025);
+  box-shadow: 0 0 25px rgba(255,0,40,0.45);
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 22px rgba(0,130,255,0.35));
+}
+
+.hero-tools {
+  max-width: 1100px;
+  margin: 30px auto 0 !important;
+}
+
+.hero-tool {
+  background: linear-gradient(145deg, #151c2e, #090e19);
+  border: 1px solid rgba(0,145,255,0.65);
+}
+
+.hero-tool:nth-child(even) {
+  border-color: rgba(255,40,60,0.65);
+}
+
+.hero-tool:hover {
+  border-color: #ff3045;
+  box-shadow: 0 0 20px rgba(255,30,50,0.25);
+}
+
+.hero-trust h2 {
+  color: #55b7ff;
+}
+
+/* MOBILE HERO */
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 5% 25px !important;
+  }
+
+  .hero-main {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .hero-copy {
+    text-align: center;
+  }
+
+  .hero-copy h1 {
+    font-size: 36px !important;
+  }
+
+  .hero-copy h2 {
+    font-size: 23px;
+  }
+
+  .hero-copy p {
+    font-size: 15px;
+  }
+
+  .hero-visual img {
+    max-width: 340px;
+  }
+
+  .hero-tools {
+    grid-template-columns: repeat(2, 1fr);
+  }
+    }
   
 </style>
   
@@ -1715,40 +1853,44 @@ a[href^="mailto:"]:hover {
 <main id="main-content">
 
 
+
 <section class="hero">
-  <div class="tag">✦ YOUR YOUTUBE GROWTH PARTNER</div>
 
-  <h1>
-  Get More YouTube<br>
-  <span>Views & Subscribers!</span>
-  </h1>
-    
+  <div class="hero-main">
 
-  <p>
-  Create Smarter. Optimize Better. Grow Organically.
-  </p>
+    <div class="hero-copy">
+      <div class="tag">✦ AI-POWERED YOUTUBE GROWTH PLATFORM</div>
 
-  <a class="btn" href="#tools">Explore Free AI Tools →</a>
+      <h1>
+        Creator<span>Grow</span> AI
+      </h1>
+
+      <h2>Dream Big, Grow Organically!</h2>
+
+      <p>
+        Get 100% Organic YouTube Growth with Smart AI Tools,
+        Proven Strategies and Zero Investment!
+      </p>
+
+      <a class="btn" href="#tools">🚀 Start for Free →</a>
+
+    </div>
+
+    <div class="hero-visual">
+      <img
+        src="file_000000000944820ba0ca91b7f3efd375.png"
+        alt="3D AI Robot holding a YouTube play button with a growth arrow">
+    </div>
+
+  </div>
 
   <div class="hero-tools">
-    <div class="hero-tool">
-      <span>💡</span>
-      <p>Video Ideas</p>
-    </div>
-    <div class="hero-tool">
-      <span>🎯</span>
-      <p>Title Generator</p>
-    </div>
-    <div class="hero-tool">
-      <span>🔍</span>
-      <p>YouTube SEO</p>
-    </div>
-    <div class="hero-tool">
-      <span>🏷️</span>
-      <p>Hashtags</p>
-    </div>
+    <div class="hero-tool"><span>💡</span><p>Video Ideas</p></div>
+    <div class="hero-tool"><span>🎯</span><p>Title Generator</p></div>
+    <div class="hero-tool"><span>🔍</span><p>YouTube SEO</p></div>
+    <div class="hero-tool"><span>🏷️</span><p>Hashtags</p></div>
   </div>
-  
+
   <div class="hero-trust">
     <h2>Why Creators Love Us ✨</h2>
     <div class="trust-points">
@@ -1757,8 +1899,9 @@ a[href^="mailto:"]:hover {
       <div>🚀 Creator First</div>
     </div>
   </div>
-  
+
 </section>
+  
   
 <section class="section" id="tools">
 <h2>Powerful Creator Tools</h2>
