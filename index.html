@@ -2470,6 +2470,184 @@ a[href^="mailto:"]:hover {
     font-size: 25px;
   }
   }
+  
+/* ===== PREMIUM HOW IT WORKS & FAQ ===== */
+
+#how-it-works,
+#faq {
+  padding: 55px 7%;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(55,130,255,0.13), transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(255,48,69,0.10), transparent 45%);
+}
+
+#how-it-works h2,
+#faq h2 {
+  color: #ffffff;
+  font-weight: 800;
+  text-shadow: 0 0 15px rgba(75,145,255,0.45);
+}
+
+#how-it-works .sub,
+#faq .sub {
+  color: #b8c8e5;
+}
+
+#how-it-works .cards,
+#faq .cards {
+  max-width: 1150px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+#faq .cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#how-it-works .card,
+#faq .card {
+  background: linear-gradient(145deg, #171f3d, #10182d);
+  border: 1px solid rgba(65,145,255,0.55);
+  border-radius: 20px;
+  padding: 28px 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+}
+
+#how-it-works .card:hover,
+#faq .card:hover {
+  border-color: #ff405b;
+  box-shadow: 0 0 20px rgba(255,48,69,0.20);
+  transform: translateY(-5px);
+}
+
+#how-it-works .emoji {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+#how-it-works .card h3,
+#faq .card h3 {
+  color: #ffffff;
+}
+
+#how-it-works .card p,
+#faq .card p {
+  color: #bdc9dc;
+  line-height: 1.7;
+}
+
+@media (max-width: 700px) {
+  #how-it-works .cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  #faq .cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  #how-it-works,
+  #faq {
+    padding: 40px 6%;
+  }
+}
+  
+/* ===== PREMIUM CTA SECTION ===== */
+
+.cta {
+  padding: 65px 7%;
+  margin: 35px 7%;
+  text-align: center;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(55,130,255,0.25), transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(255,48,69,0.22), transparent 45%),
+    linear-gradient(145deg, #171f3d, #0b1225);
+  border: 1px solid rgba(80,145,255,0.65);
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(55,130,255,0.15);
+}
+
+.cta h2 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 0 0 15px rgba(80,145,255,0.5);
+}
+
+.cta p {
+  color: #c5d1e5;
+  margin: 15px 0 25px;
+}
+
+.cta .btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff3045, #e51e65);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 18px rgba(255,48,69,0.35);
+}
+
+.cta .btn:hover {
+  box-shadow: 0 0 25px rgba(255,48,69,0.65);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .cta {
+    padding: 45px 6%;
+    margin: 25px 5%;
+  }
+
+  .cta h2 {
+    font-size: 24px;
+  }
+}
+  
+/* ===== CREATORGROW PREMIUM FOOTER ===== */
+
+footer {
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(55,130,255,0.14), transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(255,48,69,0.12), transparent 45%),
+    #080f20;
+  border-top: 1px solid rgba(70,140,255,0.45);
+  padding: 40px 7% 25px;
+  color: #bdc9dc;
+  text-align: center;
+}
+
+footer h2,
+footer h3 {
+  color: #ffffff;
+}
+
+footer p {
+  color: #bdc9dc;
+  line-height: 1.7;
+}
+
+footer a {
+  color: #70baff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+footer a:hover {
+  color: #ff5268;
+  text-shadow: 0 0 10px rgba(255,48,69,0.5);
+}
+
+footer .card {
+  background: linear-gradient(145deg, #171f3d, #10182d);
+  border: 1px solid rgba(70,140,255,0.35);
+  border-radius: 16px;
+  }
+  
 </style>
   
 </head>
