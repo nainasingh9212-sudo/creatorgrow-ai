@@ -2869,6 +2869,113 @@ footer .card {
   border-color: #ff3045 !important;
   box-shadow: 0 0 22px rgba(255,48,69,0.45) !important;
   }
+  
+/* ===== PREMIUM MOBILE HEADER ===== */
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 8px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .logo img {
+    height: 72px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px 12px;
+    width: 100%;
+  }
+
+  header nav a,
+  header nav a:visited {
+    font-size: 13px;
+    margin: 0;
+    padding: 5px 0;
+    white-space: nowrap;
+  }
+}
+ 
+/* ===== VIDEO IDEAS GENERATOR FINAL DESIGN ===== */
+
+#video-generator {
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(55,130,255,0.18), transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(255,48,69,0.15), transparent 45%),
+    linear-gradient(145deg, #111a30, #0b1225) !important;
+
+  border: 1px solid #398bff !important;
+  border-radius: 22px !important;
+  box-shadow: 0 0 18px rgba(57,139,255,0.22);
+}
+
+#video-generator h2 {
+  color: #ffffff;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(70,145,255,0.4);
+}
+
+#video-generator p {
+  color: #bdc9dc;
+}
+
+#video-generator input {
+  background: #0d1730 !important;
+  color: #ffffff !important;
+  border: 1px solid #398bff !important;
+  border-radius: 12px !important;
+  padding: 14px !important;
+  max-width: 400px;
+}
+
+#video-generator button {
+  background: linear-gradient(135deg, #ff3045, #e51e65) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 12px !important;
+  padding: 14px 24px !important;
+  font-weight: bold !important;
+  box-shadow: 0 0 16px rgba(255,48,69,0.3);
+}
+
+#video-generator #ideas {
+  color: #ffffff;
+  background: rgba(20,30,55,0.7);
+  border: 1px solid rgba(57,139,255,0.3);
+  border-radius: 14px;
+  padding: 15px;
+}
+
+#video-generator button:hover {
+  box-shadow: 0 0 22px rgba(255,48,69,0.55);
+}
+
+@media (max-width: 700px) {
+  #video-generator {
+    margin: 25px 5% !important;
+    padding: 35px 5% !important;
+  }
+
+  #video-generator h2 {
+    font-size: 23px;
+  }
+
+  #video-generator input {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+    }
+  
 </style>
   
 </head>
