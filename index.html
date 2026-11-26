@@ -1905,6 +1905,102 @@ a[href^="mailto:"]:hover {
     font-size: 11px;
   }
 }
+  /* ===== PREMIUM WHY CHOOSE CREATORGROW AI ===== */
+
+#features {
+  padding: 55px 5% !important;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(0,100,255,0.13), transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(255,0,40,0.12), transparent 45%),
+    linear-gradient(145deg, #080d20, #17102d, #080d20);
+  border-radius: 28px;
+}
+
+#features h2 {
+  color: #ffffff;
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-shadow: 0 0 18px rgba(80,150,255,0.25);
+}
+
+#features .sub {
+  color: #cbd5e1;
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+#features .cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+#features .card {
+  background: linear-gradient(145deg, #182139, #0b1120);
+  border: 1px solid rgba(22,139,255,0.65);
+  border-radius: 22px;
+  padding: 28px 18px;
+  transition: 0.3s ease;
+}
+
+#features .card:nth-child(even) {
+  border-color: rgba(255,48,69,0.65);
+}
+
+#features .card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 0 22px rgba(22,139,255,0.25);
+}
+
+#features .emoji {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+#features .card h3 {
+  color: #ffffff;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+#features .card p {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* MOBILE FEATURES */
+
+@media (max-width: 768px) {
+  #features {
+    padding: 40px 5% !important;
+  }
+
+  #features .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  #features .card {
+    padding: 22px 12px;
+  }
+
+  #features .card h3 {
+    font-size: 16px;
+  }
+
+  #features .card p {
+    font-size: 13px;
+  }
+
+  #features .emoji {
+    font-size: 35px;
+  }
+}
 </style>
   
 </head>
