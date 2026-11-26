@@ -1851,7 +1851,60 @@ a[href^="mailto:"]:hover {
     border: 2px solid #16C784;
     box-shadow: 0 0 15px rgba(22,199,132,0.25);
   }
-} 
+}
+  /* ===== PREMIUM TRUST STRIP ===== */
+
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 15px;
+  padding: 22px 4%;
+  background: linear-gradient(135deg, #080d20, #15102d, #080d20);
+  border-top: 2px solid #168BFF;
+  border-bottom: 2px solid #FF3045;
+  text-align: center;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px;
+}
+
+.trust-item span {
+  font-size: 30px;
+}
+
+.trust-item p {
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .trust-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 16px 3%;
+  }
+
+  .trust-item {
+    gap: 7px;
+    padding: 8px 3px;
+  }
+
+  .trust-item span {
+    font-size: 23px;
+  }
+
+  .trust-item p {
+    font-size: 11px;
+  }
+}
 </style>
   
 </head>
@@ -1922,6 +1975,28 @@ a[href^="mailto:"]:hover {
     </div>
   </div>
 
+</section>
+  <!-- PREMIUM TRUST STRIP -->
+<section class="trust-strip">
+  <div class="trust-item">
+    <span>🛡️</span>
+    <p>Trusted by<br>Creators Worldwide</p>
+  </div>
+
+  <div class="trust-item">
+    <span>🌐</span>
+    <p>Global Platform<br>For All YouTubers</p>
+  </div>
+
+  <div class="trust-item">
+    <span>⚡</span>
+    <p>Fast & Easy<br>To Use</p>
+  </div>
+
+  <div class="trust-item">
+    <span>❤️</span>
+    <p>Grow Together<br>With CreatorGrow AI</p>
+  </div>
 </section>
   
   
