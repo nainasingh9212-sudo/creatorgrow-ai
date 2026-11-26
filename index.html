@@ -2001,6 +2001,78 @@ a[href^="mailto:"]:hover {
     font-size: 35px;
   }
 }
+  /* ===== CREATORGROW PREMIUM AI TOOLS ===== */
+
+#tools {
+  background:
+    radial-gradient(ellipse at 15% 20%, rgba(0,100,255,0.16), transparent 45%),
+    radial-gradient(ellipse at 85% 80%, rgba(255,0,40,0.13), transparent 45%),
+    #05070d !important;
+  padding: 55px 5% !important;
+}
+
+#tools h2 {
+  color: #ffffff;
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 900;
+}
+
+#tools .sub {
+  color: #cbd5e1;
+  margin-bottom: 35px;
+}
+
+#tools .card {
+  background: linear-gradient(145deg, #182139, #090e19);
+  border: 2px solid #168BFF;
+  border-radius: 22px;
+  box-shadow: 0 0 15px rgba(22,139,255,0.20);
+}
+
+#tools .card:nth-child(even) {
+  border-color: #FF3045;
+  box-shadow: 0 0 15px rgba(255,48,69,0.20);
+}
+
+#tools .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(22,139,255,0.35);
+  border-color: #55b7ff;
+}
+
+#tools .card h3 {
+  color: #ffffff;
+  font-size: 19px;
+}
+
+#tools .card p {
+  color: #cbd5e1;
+}
+
+/* MOBILE AI TOOLS */
+
+@media (max-width: 768px) {
+  #tools {
+    padding: 40px 5% !important;
+  }
+
+  #tools .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  #tools .card {
+    padding: 22px 12px;
+  }
+
+  #tools .card h3 {
+    font-size: 16px;
+  }
+
+  #tools .card p {
+    font-size: 13px;
+  }
+                         }
 </style>
   
 </head>
