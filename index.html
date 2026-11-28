@@ -3086,8 +3086,10 @@ header nav.active {
          alt="CreatorGrow AI Robot Logo"
          style="height:85px;width:auto;">
   </div>
-  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
-    ☰
+  <button type="button" class="menu-toggle"
+onclick="document.getElementById('mobileMenu').classList.toggle('active')"
+aria-label="Toggle navigation">
+  ☰
   </button>
   <nav class="nav-menu" id="mobileMenu">
     <a href="#home">Home</a>
