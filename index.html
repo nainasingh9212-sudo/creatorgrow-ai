@@ -2993,6 +2993,16 @@ header:hover {
 header:active {
   border-color: #ff3045 !important;
 }
+  .menu-toggle {
+  display: none;
+  background: transparent;
+  color: white;
+  border: 1px solid #398bff;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 24px;
+  cursor: pointer;
+  }
   /* ===== MOBILE HEADER ALIGNMENT ===== */
 @media (max-width: 700px) {
   header {
@@ -3008,13 +3018,19 @@ header:active {
   }
 
   header nav {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
     gap: 5px 12px;
     width: 100%;
   }
-
+header nav {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px 12px;
+    width: 100%;
+}
   header nav a {
     font-size: 13px;
     margin: 0;
@@ -3038,7 +3054,7 @@ header:active {
   }
 
   header nav {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
     gap: 4px 10px;
@@ -3062,8 +3078,10 @@ header:active {
          alt="CreatorGrow AI Robot Logo"
          style="height:85px;width:auto;">
   </div>
-
-  <nav>
+  <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">
+    ☰
+  </button>
+  <nav class="nav-menu" id="mobileMenu">
     <a href="#home">Home</a>
     <a href="#tools">AI Tools</a>
     <a href="#analytics">Analytics</a>
